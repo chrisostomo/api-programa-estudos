@@ -3,6 +3,10 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 
+$container['db'];
+
+
+
 // Routes
 
 $app->get('/[{name}]', function (Request $request, Response $response, array $args) {
@@ -12,3 +16,5 @@ $app->get('/[{name}]', function (Request $request, Response $response, array $ar
     // Render index view
     return $this->renderer->render($response, 'index.phtml', $args);
 });
+
+require __DIR__ . '/routes/planoEstudos.php';
