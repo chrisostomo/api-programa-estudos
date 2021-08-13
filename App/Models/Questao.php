@@ -25,12 +25,12 @@ class Questao extends Eloquent
         ->get();   
     }
 
-    public function getAssuntos($id_orgao,$id_banca)
+    public function getQuestoes($id_orgao,$id_banca)
     {
-        # code...
+        return $this->select()
+        ->where('id_orgao', '=', $id_orgao)
+        ->where('id_banca', '=', $id_banca)
+        ->get(); 
     }
 
-    public function totalQuestoes($id_assunto){
-
-    }
 }

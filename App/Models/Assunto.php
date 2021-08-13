@@ -8,4 +8,13 @@ class Assunto extends Eloquent
 {
     protected $table = 'tb_assunto';
 
+
+    public function getAssuntos($ids){
+        return $this->select()
+        //->whereIn('id_assunto',$ids)
+        ->get();
+
+    }
+
 }
+
