@@ -1,27 +1,58 @@
-# Slim Framework 3 Skeleton Application
+# PROGRAMA DE ESTUDOS (API)
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework 3 application. This application uses the latest Slim 3 with the PHP-View template renderer. It also uses the Monolog logger.
+Exibe página de programa de estudos, baseado nos filtros escolhidos pelo usuário (Banca e Órgão). O programa de estudos exibe uma árvore com assuntos e quantidade de questões disponíveis.
 
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+![app](https://maisqueonline.com.br/app1.png "app")
 
-## Install the Application
+## Arquitetura
 
-Run this command from the directory in which you want to install your new Slim Framework application.
+```
+1) Back-end - API RESTful
+  - PHP 7 
+  - Slim Framework
+  - ORM Eloquent
+  - Migrations Phinx
+2) Front-end
+  - Vue 
+  - Nuxt
+  - Vuetify
+3) DB
+  - MySQL
+```
 
-    php composer.phar create-project slim/slim-skeleton [my-app-name]
+## MER
+![MER](https://maisqueonline.com.br/MER.png "MER")
 
-Replace `[my-app-name]` with the desired directory name for your new application. You'll want to:
 
-* Point your virtual host document root to your new application's `public/` directory.
-* Ensure `logs/` is web writeable.
+## INSTALAÇÃO
 
-To run the application in development, you can run these commands 
+- Clone do Workspace
 
-	cd [my-app-name]
-	php composer.phar start
+`   git clone https://github.com/chrisostomo/programa-de-estudos.git`
 
-Run this command in the application directory to run the test suite
+- Dentro da Workspace clone o back-end e o front-end
 
-	php composer.phar test
+`   git clone https://github.com/chrisostomo/api-programa-estudos.git`
 
-That's it! Now go build something cool.
+`   git clone https://github.com/chrisostomo/app-programas-estudos.git`
+
+- A estrutura de pastas deve ficar assim:
+```
+- programa-de-estudos
+  - api-programa-estudos
+  - app-programas-estudos
+```
+
+### EXECUTAR SERVIÇO
+
+`docker-compose up`
+
+### APÓS A INSTALAÇÃO DE TODOS OS CONTAINERS ACESSE:
+
+`http://localhost:3000/`
+
+```
+...
+    IMPORTANTE: O back-end roda na porta 8000.
+...
+```
